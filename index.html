@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+
+<body>
+    <div class="whatsapp-link-container">
+        <div class="whatsapp-link-intro whatsapp-link-section">
+            <div class="whatsapp-link-default">
+                <span id="whatsapp-link-head">WhatsApp QR Code Generator</span>
+                <h1>WhatsApp <span>QR Codes</span> Generator to Increase Leads and Sales</h1>
+                <p class="whatsapp-link-pargh">Using QR codes, this application makes it simple for contacts to initiate a WhatsApp chat from your website or landing pages.</p>
+                <button onclick="scrollToSection('whatsapp-link-form-input')" class="whatsapp-link-btns">Generate Now</button>
+            </div>
+            <div class="whatsapp-link-image-section">
+                <img src="./assets/images/main.webp" width="450" height="500" alt="Main Image">
+            </div>
+        </div>
+
+        <!-- about section -->
+        <div class="whatsapp-link-about whatsapp-link-section">
+            <div class="whatsapp-link-about-head">
+                <h2>Increase engagement with WhatsApp Click-to-Chat QR codes</h2>
+            </div>
+            <div class="whatsapp-link-about-box">
+                <div class="whatsapp-link-content whatsapp-link-first">
+                    <div class="whatsapp-link-pic">
+                        <img src="./assets/images/why.svg" alt="whatsapp">
+                    </div>
+                    <div class="whatsapp-link-descripition">
+                        <h3>Why QR Codes?</h3>
+                        <p>Consumers can reach you by using Click to Chat WhatsApp QR codes, which eliminates the need to store your phone number.</p>
+                    </div>
+                </div>
+                <div class="whatsapp-link-content whatsapp-link-mid">
+                    <div class="whatsapp-link-pic">
+                        <img src="./assets/images/how.svg" alt="instagram">
+                    </div>
+                    <div class="whatsapp-link-descripition">
+                        <h3>How these QR codes work?</h3>
+                        <p>This free program creates QR code links for wa.me WhatsApp Click to Chat, which can be used with all of your company WhatsApp numbers.</p>
+                    </div>
+                </div>
+                <div class="whatsapp-link-content whatsapp-link-last">
+                    <div class="whatsapp-link-pic">
+                        <img src="./assets/images/using.svg" alt="facebook">
+                    </div>
+                    <div class="whatsapp-link-descripition">
+                        <h3>Using the QR generator</h3>
+                        <p>Create WhatsApp Click to Chat QR codes containing your number and a welcome message so you can set the tone of the conversation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inform-section -->
+        <div class="whatsapp-link-inform whatsapp-link-section">
+            <h2>Steps to creating a WhatsApp chat link</h2>
+            <div class="whatsapp-link-inform-details">
+                <div class="whatsapp-link-step">
+                    <img class="whatsapp-link-inform-img" src="./assets/images/step1.webp" alt="step 1">
+                    <h3>Step #1</h3>
+                    <p>Select your country code and Enter your WhatsApp Business number.</p>
+                </div>
+                <div class="whatsapp-link-step">
+                    <img class="whatsapp-link-inform-img" src="./assets/images/step2.webp" alt="step 2">
+                    <h3>Step #2</h3>
+                    <p>Add a pre-filled welcome message if desired.</p>
+                </div>
+                <div class="whatsapp-link-step">
+                    <img class="whatsapp-link-inform-img" src="./assets/images/step3.webp" alt="step 3">
+                    <h3>Step #3</h3>
+                    <p>Finally, click on the 'Generate Now' button. It's that easy!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- form-section -->
+        <div class="whatsapp-link-form whatsapp-qr-section" id="whatsapp-link-form">
+            <div class="whatsapp-link-form-img">
+                <img src="./assets/images/form.webp" alt="" width="470" height="520">
+            </div>
+            <div class="whatsapp-link-form-input" id="whatsapp-link-form-input">
+                <h2>Create WhatsApp Click to Chat QR Codes</h2>
+                <h3>Enter your WhatsApp Number</h3>
+                <!-- <p>Enter your WhatsApp number along with your country code (without the '+' symbol). For instance, if your country code is +91 and your WhatsApp number is 872849182, just type 91872849182.</p> -->
+                <input type="tel" id="whatsapp-link-phone" placeholder="eg: 1234567890" required>
+
+                <h3>Share your Email ID</h3>
+                <input type="text" id="whatsapp-link-email" placeholder="Email" required>
+
+                <h3>Welcome Message (Optional)</h3>
+                <p>Auto-send this text when users click your chat link.</p>
+                <textarea id="whatsapp-link-message" placeholder="eg. Hello, I have a question. Can you please help me?"></textarea>
+
+                <button id="whatsapp-link-submit-button" class="whatsapp-link-btns">Generate Now</button>
+            </div>
+        </div>
+
+        <!-- output-section -->
+        <div id="whatsapp-link-output-section" class="whatsapp-link-output whatsapp-link-section" style="display: none;">
+            <div class="whatsapp-link-link-output">
+                <canvas id="whatsapp-link-link-code"></canvas>
+            </div>
+            <div class="whatsapp-link-info-output">
+                <hr>
+                <div class="whatsapp-link-output-show">
+                    <div id="url-box" style="display: none;"></div>
+                </div>
+                <div class="whatsapp-link-output-btn-box">
+                    <button id="whatsapp-link-copy-btn" class="whatsapp-link-output-btn whatsapp-link-copy" style="display: none;"><img id="whatsapp-link-copy-svg" src="./assets/images/copy.svg" alt="copied" width="26" height="26">Copy to Clipboard</button>
+                    <button id="whatsapp-link-download-btn" class="whatsapp-link-output-btn whatsapp-link-download" style="display: none;"><img id="whatsapp-link-download-svg" src="./assets/images/download.svg" alt="download" width="26" height="26">Download QR Code</button>
+                </div>
+                <div id="whatsapp-link-copy-message" style="display: none;">URL copied to clipboard!</div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        $(document).ready(function () {
+            var input = document.querySelector("#whatsapp-link-phone");
+            var iti = window.intlTelInput(input, {
+                initialCountry: "in",
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
+            });
+        
+            function checkInputs() {
+                var phoneVal = iti.getNumber();
+                var emailVal = $('#whatsapp-link-email').val().trim();
+                if (phoneVal && emailVal) {
+                    $('#whatsapp-link-submit-button').prop('disabled', false);
+                } else {
+                    $('#whatsapp-link-submit-button').prop('disabled', true);
+                }
+            }
+        
+            $('#whatsapp-link-phone, #whatsapp-link-email').on('input', checkInputs);
+        
+            $('#whatsapp-link-submit-button').on('click', function (e) {
+                e.preventDefault();
+                
+                var phoneNumber = iti.getNumber();
+                var email = $('#whatsapp-link-email').val().trim();
+                var message = $('#whatsapp-link-message').val().trim();
+        
+                if (phoneNumber && email) {
+                    // Construct the WhatsApp URL
+                    var whatsappUrl = 'https://wa.me/' + phoneNumber.replace('+', '') + '?text=' + encodeURIComponent(message);
+        
+                    // Generate QR code
+                    try {
+                        var qr = new QRious({
+                            element: document.getElementById('whatsapp-link-link-code'),
+                            value: whatsappUrl,
+                            size: 200
+                        });
+        
+                        $('#whatsapp-link-output-section').show();
+                        $('#whatsapp-link-download-btn').show();
+                        $('#whatsapp-link-copy-btn').show();
+                        $('#whatsapp-link-url-box').show().text(whatsappUrl);
+        
+                        $('#whatsapp-link-download-btn').off('click').on('click', function () {
+                            var link = document.createElement('a');
+                            link.href = qr.toDataURL();
+                            link.download = 'whatsapp-link-code.png';
+                            link.click();
+                        });
+        
+                        $('#whatsapp-link-copy-btn').off('click').on('click', function () {
+                            navigator.clipboard.writeText(whatsappUrl).then(function () {
+                                $('#whatsapp-link-copy-message').show().fadeOut(2000);
+                            }, function (err) {
+                                console.error('Could not copy text: ', err);
+                            });
+                        });
+        
+                    } catch (e) {
+                        console.error('Error generating QR code: ', e);
+                    }
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+        });
+        
+    </script>
+</body>
+
+</html>
